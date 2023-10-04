@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.sass";
+import Form from "./Pages/Form/Form";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export interface IItem {
+  id: number;
+  name: string;
+  price: number;
 }
 
-export default App
+const items: Array<IItem> = [
+  {
+    id: 1,
+    name: '6.7" Смартфон Apple iPhone 15 Pro Max 1024 ГБ серый',
+    price: 1000,
+  },
+  {
+    id: 2,
+    name: "Водонагреватель электрический Oasis KP-P",
+    price: 100,
+  },
+  {
+    id: 3,
+    name: "Клавиатура проводная Dark Project KD87A",
+    price: 500,
+  },
+];
+
+function App() {
+  return (
+    <>
+      <Form items={items} />
+    </>
+  );
+}
+
+export default App;

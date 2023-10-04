@@ -1,0 +1,42 @@
+.card
+  margin-top: 20px
+  &__container
+    display: grid
+    grid-template-columns: 6fr 4fr
+    gap: 20px
+  &__data
+    padding: 20px
+    border: 1px solid black
+    display: flex
+    flex-direction: column
+    gap: 10px
+  &__title
+    font-size: 16px
+    color: black
+    margin: 0
+  &__input
+    border: 1px solid black
+    background: none
+    height: 40px
+    color: black
+    padding: 10px
+    font-size: 18px
+    &_cvc
+      max-width: 55px
+    &_time
+      padding: 0 20px
+      max-width: 75px
+      font-size: 24px
+  &__area
+    display: flex
+    flex-direction: column
+    gap: 10px
+    &_time
+      display: flex
+      gap: 10px
+    &_cvc
+      padding: 20px 20px 20px 0
+  &__errors
+    display: flex
+    flex-direction: column
+    gap: 5px
